@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+  background: #40255B;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #40255B;
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #40255B; 
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: 100%;
+  background: linear-gradient(120deg, #D4D6EC, #ecd7c4, #d5a0f8, #c1dcfe);
+  background-size: 400% 400%;
+  animation: gradient 10s ease-out infinite;
+  position: relative;
+  transition: all 0.5s linear;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+}
+}
+
+.music  {
+  position: relative;
+  top: 32px;
+  left: 30px;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem; 
+  padding-left: 2rem;
+}
+
+.text-content {
+  gap: 1rem;
+  width: 100%;
+}
+
+.text-content .text-1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #3b103a;
+}
+ 
+/* Lugar para alterar. */ 
+.text-content .text-2 {
+  width: 90%;
+  font-size: 1rem;
+  padding: 1.25rem;
+  /* white-space: pre;
+  overflow: hidden; */
+  border-right: .04em solid black;
+  animation: blink-caret .25s step-end infinite;
+  font-weight: 500;
+  text-align: justify;
+  letter-spacing: 2px;
+  color: #141414;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent;
+  } 
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+.img-container {
+  max-width: 35rem;
+  width: 100%;
+}
+
+.img-container .img {
+  width: 24rem;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: 4px 8px 8px rgba(0,0,0,0.60);
+  animation: 0.5s linear;
+  cursor: pointer;
+}
+
+.img-container .img:hover {
+  content: 'Nossa primeira foto na mudança do ap';
+  font-size: 1.375rem;
+  color: #f1f1f1;
+}
+
+
+@keyframes up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+
+.hidden {
+  opacity: 0;
+  filter: blue(15px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.slider-container {
+  height: 100vh;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  transition: all 1s linear;
+}
+
+.project-img {
+  width: 100%;
+  min-height: contain;
+  
+}
+
+.project-img .img-slider {
+  width: 420px;
+  min-height: contain;
+  box-shadow: 4px 8px 8px rgba(0,0,0,0.7);
+  object-fit: cover;
+}
+
+.swiper {
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  width: 100%;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  gap: 1.2rem;
+ 
+  padding-left: 2rem;
+}
+.footer-text {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+.click-wpp {
+  width: 320px;
+  padding: 20px;
+  text-decoration: none;
+  background: linear-gradient(120deg, #622abb, #00408d, #3b103a);
+  border: none;
+  border-radius: 0.9rem;
+  color: aliceblue;
+  font-size: 1.2rem;
+  transition: .5s linear;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .container {
+    background-size: 200% 200%;
+  }
+  .section {
+    height: auto;
+    padding: 2.2rem;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .container .section {
+    flex-direction: column-reverse;
+  }
+  .img-container .img {
+    margin-left: 2rem;
+    width: 80%;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    box-shadow: 4px 8px 8px rgba(0,0,0,0.60);
+    animation: 0.5s linear;
+    cursor: pointer;
+  }
+  .swiper {
+    height: 270px;
+  }
+  .project-img .img-slider {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-size: 300% 300%; 
+  }
+  .section {
+    height: auto;
+    padding-left: 1rem;
+  }
+}

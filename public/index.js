@@ -15,43 +15,6 @@ const elements = document.querySelectorAll(".hidden");
 
 elements.forEach((element) => myObserver.observe(element));
 
-// Machine of words
-// document.addEventListener("DOMContentLoaded", () => {
-//   const typewriterElement = document.querySelector(".text-2");
-//   const text = typewriterElement.textContent;
-//   typewriterElement.textContent = "";
-//   let i = 0;
-
-//   function type() {
-//     if (i < text.length) {
-//       typewriterElement.textContent += text.charAt(i);
-//       i++;
-//       setTimeout(type, 90);
-//     }
-//   }
-
-//   type();
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const typewriterElements = document.querySelectorAll(".text-2");
-
-//   typewriterElements.forEach(typewriterElement => {
-//     const text = typewriterElement.textContent;
-//     typewriterElement.textContent = "";
-//     let i = 0;
-
-//     function type() {
-//       if (i < text.length) {
-//         typewriterElement.textContent += text.charAt(i);
-//         i++;
-//         setTimeout(type, 90);
-//       }
-//     }
-
-//     type();
-//   });
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const typewriterElements = document.querySelectorAll(".text-2");
